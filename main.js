@@ -9,13 +9,19 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
+    var html1 = '<div class="col-6">';
+    var html2 = '<div class="col-6">';
     // When the page loads, the coffees should be sorted by their ids in ascending order
     // changed for loop to load in order of index
     for (let i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
+        if(i % 2 == 0){
+            html1 += renderCoffee(coffees[i]);
+        } else {
+            html2 += renderCoffee(coffees[i]);
+        }
     }
-    return html;
+    let finalHtml = "<div class= 'row'>" + html1 +"</div>" + html2 + "</div>"
+    return finalHtml;
 }
 
 function updateCoffees(e) {
@@ -73,6 +79,15 @@ function addANewCoffee(e) {
         };
         coffees.push(newCoffeeObj);
         updateCoffees();
+        localStorage.setItem('storedCoffees', JSON.stringify(coffees));
+    }
+}
+
+function checkForExistingCoffees() {  // if there are stored coffes in local storage use those
+    // console.log(localStorage.getItem('storedCoffees'));
+    let storedItem = localStorage.getItem('storedCoffees');
+    if (storedItem !== null) {
+        coffees = JSON.parse(storedItem);
     }
 }
 
@@ -88,6 +103,8 @@ let searchBox = document.querySelector('#search-term');
 
 // query selector for the event handler for adding a new coffee
 let newCoffeeBox = document.querySelector("#new-coffee-submit");
+
+checkForExistingCoffees();
 
 tbody.innerHTML = renderCoffees(coffees);
 
