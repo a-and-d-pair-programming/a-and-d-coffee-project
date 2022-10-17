@@ -12,3 +12,37 @@ td, th {
     padding: 5px 10px;
 }
 
+.jumbotron {
+    background-image: url("./assets/coffee-banner.jpg");
+    background-size: cover;
+    /*max-width: 100%;*/
+    /*height: auto;*/
+    height: 500px;
+    padding: 0;
+    margin: 0;
+}
+
+.jumbotron > h1 {
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+/*#jumbo-img {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background-size: cover;*/
+/*}*/
+
+body {
+    background-image: url("./assets/beans.jpg");
+    background-color: #cccccc;
+    max-width: 100%;
+    height: auto;
+    font-family: monospace;
+}
+
+div {
+    color: rgb(239, 213, 184);
+    font-family: monospace;
+}
