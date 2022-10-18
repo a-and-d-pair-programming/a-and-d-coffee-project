@@ -1,16 +1,4 @@
-/*Style it!*/
-
-/*The page looks pretty plain as it is, and the refactoring we did above to use divs for coffees should give us more flexibility in styling. (Hint: the styling shown in the example below can be achieved purely with bootstrap classes, that is, without custom CSS)*/
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+@import url(//fonts.googleapis.com/css?family=Silkscreen:300,500);
 
 .jumbotron {
     background-image: url("./assets/coffee-banner.jpg");
