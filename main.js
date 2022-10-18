@@ -9,8 +9,8 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html1 = '<div class="col-6">';
-    var html2 = '<div class="col-6">';
+    var html1 = '<div class="col-12 col-lg-6">';
+    var html2 = '<div class="col-12 col-lg-6">';
     // When the page loads, the coffees should be sorted by their ids in ascending order
     // changed for loop to load in order of index
     for (let i = 0; i < coffees.length; i++) {
