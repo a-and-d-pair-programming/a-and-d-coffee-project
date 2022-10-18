@@ -9,8 +9,8 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html1 = '<div class="col-6">';
-    var html2 = '<div class="col-6">';
+    var html1 = '<div class="col-12 col-lg-6">';
+    var html2 = '<div class="col-12 col-lg-6">';
     // When the page loads, the coffees should be sorted by their ids in ascending order
     // changed for loop to load in order of index
     for (let i = 0; i < coffees.length; i++) {
@@ -25,10 +25,9 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    // no submit button so we don't need this conditional
-    // if (e) {
-    //     e.preventDefault(); // don't submit the form, we just want to update the data
-    // }
+    if (e) {
+        e.preventDefault(); // don't submit the form, we just want to update the data
+    }
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     // added filter variable to contain value of search box, ensuring case-insensitive
