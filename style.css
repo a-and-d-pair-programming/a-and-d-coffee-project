@@ -20,13 +20,14 @@ td, th {
     height: 500px;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
-.jumbotron > h1 {
-    width: 100%;
-    text-align: center;
-    color: black;
-}
+/*.jumbotron > h1 {*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*    color: black;*/
+/*}*/
 
 /*#jumbo-img {*/
 /*    margin: 0;*/
@@ -46,3 +47,46 @@ div {
     color: rgb(239, 213, 184);
     font-family: monospace;
 }
+
+div {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 75px;
+    color: #271300;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.crd-hdr-style {
+    background-color: #7D6E83;
+    color: #F8EDE3;
+}
+
+.form-cntr {
+    background-color: #D0B8A8;
+    color: #271300;
+}
+
+.card-body {
+    display: flex;
+}
+
+.card {
+    border-color: #7D6E83;
+}
+

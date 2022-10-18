@@ -25,10 +25,9 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    // no submit button so we don't need this conditional
-    // if (e) {
-    //     e.preventDefault(); // don't submit the form, we just want to update the data
-    // }
+    if (e) {
+        e.preventDefault(); // don't submit the form, we just want to update the data
+    }
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     // added filter variable to contain value of search box, ensuring case-insensitive
