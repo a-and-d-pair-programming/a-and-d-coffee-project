@@ -82,8 +82,7 @@ function addANewCoffee(e) {
     }
 }
 
-function checkForExistingCoffees() {  // if there are stored coffes in local storage use those
-    // console.log(localStorage.getItem('storedCoffees'));
+function checkForExistingCoffees() {  // if there are stored coffees in local storage use those
     let storedItem = localStorage.getItem('storedCoffees');
     if (storedItem !== null) {
         coffees = JSON.parse(storedItem);
@@ -91,9 +90,6 @@ function checkForExistingCoffees() {  // if there are stored coffes in local sto
 }
 
 var tbody = document.querySelector('#coffees');
-// commented out submit button below, and replaced with search box event listener
-//var submitButton = document.querySelector('#submit');
-
 var roastSelection = document.querySelector('#roast-selection');
 
 // add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
@@ -107,8 +103,6 @@ checkForExistingCoffees();
 
 tbody.innerHTML = renderCoffees(coffees);
 
-// commented out submit button below, and replaced with search box event listener
-// submitButton.addEventListener('click', updateCoffees);
 searchBox.addEventListener('keyup', updateCoffees);
 
 // added event listener so selection of roast reacts on change to add 'all' selection functionality
